@@ -8,7 +8,7 @@
 import os
 
 from nltk.corpus import CorpusReader
-from nltk.tokenize.punkt import PunktWordTokenizer
+from nltk.tokenize.punkt import PunktSentenceTokenizer
 from nltk.tag import TaggerI, ClassifierBasedTagger                                          
 from nltk.tag.hmm import HiddenMarkovModelTaggerTransformI
 from nltk.classify import ClassifierI
@@ -138,7 +138,7 @@ class NamedEntityI(str):
     
     def split(self, sep=None, maxsplit=-1):
         if not sep and maxsplit == -1:
-            tokens = PunktWordTokenizer().tokenize(self)
+            tokens = PunktSentenceTokenizer().tokenize(self)
         else:
             tokens = str.split(self, sep, maxsplit)
         result = []            
