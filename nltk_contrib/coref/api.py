@@ -10,7 +10,7 @@ import os
 from nltk.corpus import CorpusReader
 from nltk.tokenize.punkt import PunktSentenceTokenizer
 from nltk.tag import TaggerI, ClassifierBasedTagger                                          
-from nltk.tag.hmm import HiddenMarkovModelTaggerTransformI
+#from nltk.tag.hmm import HiddenMarkovModelTaggerTransformI
 from nltk.classify import ClassifierI
 from nltk.util import LazyMap
 
@@ -50,22 +50,22 @@ class TrainableI(object):
         raise AssertionError()
         
         
-class HiddenMarkovModelChunkTaggerTransformI(HiddenMarkovModelTaggerTransformI):
-    # Inherit the superclass documentation.
-    def __init__(self):
-        if self.__class__ == HiddenMarkovModelChunkTaggerTransformI:
-            raise AssertionError, "Interfaces can't be instantiated"
-    
-    def path2tags(self, path):
-        """
-        Transform a viterbi/tag sequence of (word, tag) into a list of tags.
-        
-        @return: a C{list} of tags.
-        @rtype: C{list}
-        @param path: a C{list} of (word, tag) pairs.
-        @type path: C{list} of C{tuple}
-        """
-        raise AssertionError()
+#class HiddenMarkovModelChunkTaggerTransformI(HiddenMarkovModelTaggerTransformI):
+#    # Inherit the superclass documentation.
+#    def __init__(self):
+#        if self.__class__ == HiddenMarkovModelChunkTaggerTransformI:
+#            raise AssertionError, "Interfaces can't be instantiated"
+#    
+#    def path2tags(self, path):
+#        """
+#        Transform a viterbi/tag sequence of (word, tag) into a list of tags.
+#        
+#        @return: a C{list} of tags.
+#        @rtype: C{list}
+#        @param path: a C{list} of (word, tag) pairs.
+#        @type path: C{list} of C{tuple}
+#        """
+#        raise AssertionError()
 
 
 class CorpusReaderDecoratorI(CorpusReader):
