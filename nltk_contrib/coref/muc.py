@@ -488,10 +488,10 @@ def tree2tuple(tree):
         # Get the leaves.
         s = (tree.leaves(),)
         # Get the label
-        if isinstance(tree.node, basestring):
-            node = (tree.node,)
-        elif isinstance(tree.node, tuple):
-            node = tree.node
+        if isinstance(tree.label(), basestring):
+            node = (tree.label(),)
+        elif isinstance(tree.label(), tuple):
+            node = tree.label()
         else:
             raise
         # Merge the leaves and the label.
